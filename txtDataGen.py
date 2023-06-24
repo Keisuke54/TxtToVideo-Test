@@ -46,4 +46,3 @@ with open('txtData.py', 'w') as file:
         file.write(", ".join(str(x) for x in sublist))
         file.write("],\n")
     file.write("]")
-
