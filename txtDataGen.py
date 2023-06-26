@@ -1,19 +1,18 @@
 # text input
-inputTxt = ["waterfall from bird's eye view in a forest with moisture",
-               "a surfer being covered by backlight and shaded dark looking at shore in orange sunset",
-               "a woman on a left and a man on a right working together",
-               "a white car moving across a forest road",
-               "strawberries in a busket with unstable camera focus",
-               "aerial footage an around rocky cliff covered with green in volcanic area under overcast weather",
-               "zooming out of deadsea shore, white land and green sea",
-               "black and white footage of hands turning to the next page of a book in a shadow",
-               "a man in a red shirt & black pants and a man in a blue jacket & black shirt & black pants standing by an abandoned airplane on the shore",
-               "a person wearing jeans swinging crossed foot with orange sox and a white shoe labled as TRAVEL",
-               "aeriala timelapse over a town with lots of trees, roads and cars in overcast weather",
-               "a woman in a white shirt and brown skirt kissing with a man in brown jacket, blueshirt",
-               "aerial footage of three sailboats in ocaen",
-               "dancers and musicians performing on a promenade",
-               ]
+inputTxt = [
+    "aerial footage of three sailboats in ocaen",
+    "a surfer being covered by backlight and shaded dark looking at shore in orange sunset",
+    "a man in a red shirt & black pants and a man in a blue jacket & black shirt & black pants standing by an abandoned airplane on the shore",
+    "aerial footage an around rocky cliff covered with green in volcanic area under overcast weather",
+    "strawberries in a busket with unstable camera focus",
+    "waterfall from bird's eye view in a forest with moisture",
+    "dancers and musicians performing on a promenade",
+    "black and white footage of hands turning to the next page of a book in a shadow",
+    "zooming out of deadsea shore with white rocky beach and green sea from the top",
+    "a person wearing jeans swinging crossed foot with orange sox and a white shoe labled as TRAVEL",
+    "a woman on a left and a man on a right working together",
+    "a white car moving across a forest road",
+    ]
 
 import tensorflow as tf
 import numpy as np
