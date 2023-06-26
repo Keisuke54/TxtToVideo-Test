@@ -1,35 +1,33 @@
 import cv2
 import numpy as np
-
-# video data 
 import os
 from os import listdir
 
-dir = 'Your Directory'
+dir = 'Directory to Video Folder'
 vidFolder = os.listdir(dir)
 
 max_frame = 300
 
 vidSequence =[]
 
+i = 0
+
 for video_path in vidFolder:
+    video_path = dir + "/" + video_path
     video = cv2.VideoCapture(video_path)
 
     frames = []
     
-    # Read the video frame by frame
-    while video.isOpened():
+    while True:
         ret, frame = video.read()
         
-        # when frame is not read 
         if not ret:
-            print('frame error')
             break
-
-    # Release the video object to avoid memory leaks
+    
+        frames.append(frame)
+        
     video.release()
 
-    # Perform padding if necessary
     num_frames = len(frames)
     padded_frames = []
     if num_frames < max_frame:
@@ -38,14 +36,19 @@ for video_path in vidFolder:
     else:
         padded_frames = frames[:max_frame]
 
-    # Resize frames if necessary
     resized_frames = []
     for frame in padded_frames:
-        resized_frame = cv2.resize(frame, (224, 224))
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
+        resized_frame = cv2.resize(gray_frame, (224, 224)) 
         resized_frames.append(resized_frame)
     
     vidSequence.append(resized_frames)
 
-print(vidSequence[0])
+    i += 1
+    print(i)
 
-np.save('vidSequence', vidSequence)
+print(np.shape(vidSequence))
+
+np.save('vidData.npy', vidSequence)
+
+print('end')
