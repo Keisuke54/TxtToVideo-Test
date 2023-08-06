@@ -6,9 +6,9 @@ from os import listdir
 dir = 'Directory to Video Folder'
 vidFolder = os.listdir(dir)
 
-max_frame = 300
+max_frame = 100
 
-vidSequence =[]
+vidSequence = []
 
 i = 0
 
