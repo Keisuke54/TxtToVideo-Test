@@ -1,2 +1,2 @@
-vidData
-vidGenModel
+vidData.npy
+vidGenModel.h5
